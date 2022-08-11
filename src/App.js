@@ -1,13 +1,18 @@
 
 import './App.css';
 import React, { Component } from 'react';
+import Navbar from './componenets/Navbar';
+import News from './componenets/News';
+
 
 class App extends Component {
-  c = 'junaid malik';
+
   render() {
     return (
       <div>
-        <h1>hello {this.c}</h1>
+        <Navbar />
+        <News />
+
       </div>
     );
   }
