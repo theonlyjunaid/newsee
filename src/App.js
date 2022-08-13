@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import React, { useState } from 'react';
 import Navbar from './componenets/Navbar';
 import News from './componenets/News';
@@ -9,13 +10,27 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
+
 const App = () => {
-  const apikey = "dbe57b028aeb41e285a226a94865f7a7"
+  const apikey = "a2c7a5fb20f749e08f16f846eb639220"
   // const[progress, setProgress] = useState(0)
   const [progress, setProgress] = useState(0)
 
 
-  const pageSize = 8;
+
+  const [pageSize, setPageSize] = useState(8);
+  // const PostNum = () => {
+  //   <li class="nav-item dropdown">
+  //     <Link class="nav-link dropdown-toggle " to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  //       Posts Per Page
+  //     </Link>
+  //     <ul class="dropdown-menu bg-dark text-center">
+  //       <li><Link class="dropdown-item  text-white" to="#" onClick={() => setPageSize(4)}>4</Link></li>
+  //       <li><Link class="dropdown-item text-white " to="#" onClick={() => setPageSize(8)}>8</Link></li>
+  //       <li><Link class="dropdown-item text-white" to="#" onClick={() => setPageSize(16)}>16</Link></li>
+  //     </ul>
+  //   </li>
+  // }
 
   console.log(process.env)
 

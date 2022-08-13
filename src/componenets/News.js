@@ -9,7 +9,7 @@ const News = (props) => {
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
     const [totalResults, setTotalResults] = useState(0);
-    // document.title = `${capitalizeFirstLetter(props.catogary)} - NewsMonkey`;
+    // document.title = `${capitalizeFirstLetter(props.catogary)} - Newsee`;
     // 
 
     const capitalizeFirstLetter = (string) => {
@@ -18,7 +18,7 @@ const News = (props) => {
 
 
     const updateNews = async () => {
-        document.title = `${capitalizeFirstLetter(props.catogary)} - NewsMonkey`;
+        document.title = `${capitalizeFirstLetter(props.catogary)} - Newsee`;
 
         props.setProgress(10)
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.catogary}&apiKey=${props.apikey}&page=${page}&pageSize=${props.pageSize}`;
@@ -37,13 +37,13 @@ const News = (props) => {
 
     }
     useEffect(() => {
-        document.title = `${capitalizeFirstLetter(props.catogary)} - NewsMonkey`;
+        document.title = `${capitalizeFirstLetter(props.catogary)} - Newsee`;
         updateNews();
     }, []);
 
 
     const handlePrevClick = async () => {
-        document.title = `${capitalizeFirstLetter(props.catogary)} - NewsMonkey`;
+        document.title = `${capitalizeFirstLetter(props.catogary)} - Newsee`;
 
         props.setProgress(10)
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.catogary}&apiKey=${props.apikey}&page=${page - 1}&pageSize=${props.pageSize}`;
@@ -85,7 +85,7 @@ const News = (props) => {
 
     return (
         <div className="container my-3">
-            <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsMonkey - Top {capitalizeFirstLetter(props.catogary)} Headlines</h1>
+            <h1 className="text-center" style={{ margin: '35px 0px' }}>Newsee - Top {capitalizeFirstLetter(props.catogary)} Headlines</h1>
             {loading && <Spinner />}
             <div className="row">
                 {!loading && articles.map((element) => {
