@@ -18,7 +18,7 @@ const App = () => {
 
 
 
-  const [pageSize, setPageSize] = useState(8);
+  const [pageSize, setPageSize] = useState(4);
   // const PostNum = () => {
   //   <li class="nav-item dropdown">
   //     <Link class="nav-link dropdown-toggle " to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
